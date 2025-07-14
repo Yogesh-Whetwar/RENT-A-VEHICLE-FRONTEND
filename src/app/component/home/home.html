@@ -1,0 +1,36 @@
+<header class="nav">
+  <div class="secnav">
+    <!-- Logo -->
+    <span class="logo">RENTAL</span>
+
+    <!-- Search Bar -->
+    <span class="search">
+      <input
+        type="text"
+        placeholder="Search for Bike or Car"
+        aria-label="Search"
+      />
+    </span>
+
+    <!-- Login Button -->
+    <span class="login" role="button" tabindex="0">
+      <a routerLink="/login" routerLinkActive="active">Login</a>
+    </span>
+
+    <!-- Sign Up Button -->
+    <span class="signup" role="button" tabindex="0">
+      <a routerLink="/signin" routerLinkActive="active">Sign Up</a>
+    </span>
+
+    <!-- More Options (Toggle Sidebar) -->
+    <span class="more-options" role="button" tabindex="0" (click)="toggleSidebar()">
+      &#8942;
+    </span>
+  </div>
+</header>
+
+<!-- Sidebar floats over Home -->
+<app-sidebar [isOpen]="showSidebar" (closeSidebar)="toggleSidebar()"></app-sidebar>
+
+
+<router-outlet></router-outlet>

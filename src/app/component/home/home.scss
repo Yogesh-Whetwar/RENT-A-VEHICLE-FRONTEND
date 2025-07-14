@@ -1,0 +1,81 @@
+.nav {
+  background-color: #333;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;;
+  .secnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    span {
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    span:first-child {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #f84464;
+      flex-shrink: 0;
+    }
+
+    .search {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+
+      input {
+        width: 100%;
+        max-width: 500px;
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
+        border: none;
+        font-size: 0.95rem;
+        outline: none;
+        box-sizing: border-box;
+      }
+    }
+
+    .login,
+    .signup {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+      color: rgb(253, 202, 202);
+      &:hover {
+        background-color: #444;
+      }
+    }
+
+    .signup {
+      background-color: #2d2b2b;
+      color: white;
+
+      &:hover {
+        background-color: #4a4949;
+      }
+    }
+     a[routerLink] {
+  color: #f84464; // your desired color
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    color: #d73755;
+    text-decoration: underline;
+  }
+}
+
+    span:last-child {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}

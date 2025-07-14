@@ -1,0 +1,28 @@
+<div class="profile-container">
+  <h2>User Profile</h2>
+
+  <div class="profile-field">
+    <label for="name">Name:</label>
+    <span id="name">{{ name }}</span>
+  </div>
+
+  <div class="profile-field">
+    <label for="email">Email:</label>
+    <span id="email">{{ email }}</span>
+  </div>
+
+  <div class="profile-field password-field">
+    <label for="password">Password:</label>
+    <input
+      id="password"
+      [type]="showPassword ? 'text' : 'password'"
+      [value]="password"
+      readonly
+    />
+
+    <div class="action-buttons">
+      <button (click)="togglePasswordVisibility()" class="dots-button">...</button>
+      <a routerLink="/updateprofile"  routerLinkActive="active" class="update-profile-link">Update Profile</a>
+    </div>
+  </div>
+</div>
