@@ -3,12 +3,12 @@
 
   <div class="profile-field">
     <label for="name">Name:</label>
-    <span id="name">{{ name }}</span>
+    <span id="name">{{ userName }}</span>
   </div>
 
   <div class="profile-field">
     <label for="email">Email:</label>
-    <span id="email">{{ email }}</span>
+    <span id="email">{{ userEmail }}</span>
   </div>
 
   <div class="profile-field password-field">
@@ -16,7 +16,7 @@
     <input
       id="password"
       [type]="showPassword ? 'text' : 'password'"
-      [value]="password"
+      [value]="userPassword"
       readonly
     />
 
