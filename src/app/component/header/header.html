@@ -1,0 +1,104 @@
+<!-- 🏠 Horizontal Navbar -->
+<section class="bg-dark text-light py-3 shadow-sm z-100">
+  <div class="container-fluid">
+    <app-home></app-home>
+  </div>
+</section>
+
+<!-- 🏍️ Hero Section -->
+<header class="bg-light text-dark py-5 border-bottom">
+  <div class="container text-center">
+    <div class="mb-4">
+      <img src="assets/images/bikeimg.png"
+           class="img-fluid rounded-4 shadow-lg"
+           alt="Bike"
+           style="max-height: 420px;" />
+    </div>
+    <h1 class="display-3 fw-bold text-uppercase text-secondary mb-3">Rent a Vehicle</h1>
+    <p class="lead text-muted mb-1">
+      Hourly rentals from ₹300. <span class="text-success fw-semibold">No deposit</span>.
+      <span class="text-primary fw-semibold">Free helmet</span>.
+    </p>
+    <p class="text-muted fs-6">Experience freedom and flexibility across Pune.</p>
+    <a routerLink="/vehicles" routerLinkActive="active"
+       class="btn btn-dark btn-lg mt-4 px-4 py-2 rounded-pill shadow-sm">
+      Browse Bikes
+    </a>
+  </div>
+</header>
+
+<!-- 💎 Features Section -->
+<section class="bg-white py-5 border-top border-light-subtle">
+  <div class="container text-center">
+    <h2 class="mb-5 fw-bold text-dark display-6">Why Choose Us</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 border-0 shadow-sm bg-light rounded-4">
+          <div class="card-body">
+            <h5 class="card-title">✅ Zero Deposit</h5>
+            <p class="card-text text-muted small">No upfront charges. Start riding instantly.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 border-0 shadow-sm bg-light rounded-4">
+          <div class="card-body">
+            <h5 class="card-title">🪖 Free Helmet</h5>
+            <p class="card-text text-muted small">Safety gear included with every booking.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 border-0 shadow-sm bg-light rounded-4">
+          <div class="card-body">
+            <h5 class="card-title">🧼 Sanitized Bikes</h5>
+            <p class="card-text text-muted small">Clean rides, guaranteed every time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 border-0 shadow-sm bg-light rounded-4">
+          <div class="card-body">
+            <h5 class="card-title">💸 Best Price</h5>
+            <p class="card-text text-muted small">Luxury rides at unbeatable rates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🎠 Featured Carousel Section -->
+<section class="bg-light text-dark py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold display-6">🔥 Featured Bikes</h2>
+    <app-bike-carousel></app-bike-carousel>
+  </div>
+</section>
+<!-- 🔷 How It Works Section -->
+<!-- 🔷 How It Works Section -->
+<section class="how-it-works text-white py-5">
+  <div class="container text-center">
+    <h4 class="mb-4 fw-bold display-6">How It Works</h4>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-3 col-sm-6">
+        <div class="fs-1 mb-2">📍</div>
+        <p class="mb-0">Select your city</p>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="fs-1 mb-2">🚗</div>
+        <p class="mb-0">Pick a vehicle, date & time</p>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="fs-1 mb-2">📆</div>
+        <p class="mb-0">Choose rental duration</p>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="fs-1 mb-2">✅</div>
+        <p class="mb-0">You're good to go!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+

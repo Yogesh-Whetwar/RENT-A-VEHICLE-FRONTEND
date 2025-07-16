@@ -1,0 +1,61 @@
+<div class="container my-5">
+  <!-- 🏍️ Bikes Section -->
+  <h2 class="mb-4 text-center fw-bold display-6">🏍️ Bikes Available for Rent</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let bike of bikeList">
+      <div class="card h-100 shadow rounded-4 overflow-hidden border-0">
+        <img [src]="bike.imageUrl" class="card-img-top" alt="{{ bike.name }}">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">{{ bike.name }}</h5>
+          <p class="card-text mb-2">
+            <strong>Type:</strong> {{ bike.type }} <br>
+            <strong>Fuel:</strong> {{ bike.fuel }} <br>
+            <strong>Gear:</strong> {{ bike.gear }} <br>
+            <strong>Price:</strong> ₹{{ bike.price }}/hr
+          </p>
+          <p class="card-text text-muted mb-3">{{ bike.description }}</p>
+          <div class="mt-auto d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <a href="#" class="btn btn-primary px-4">Book Now</a>
+            <a
+              href="https://www.google.com/maps?q=Texas+Tower+Kharadi+Pune"
+              target="_blank"
+              class="btn btn-outline-primary btn-sm px-3 py-1 location-btn"
+            >
+              📍 Pickup Location
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🚗 Cars Section -->
+  <h2 class="my-5 text-center fw-bold display-6">🚗 Cars Available for Rent</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let car of carList">
+      <div class="card h-100 shadow rounded-4 overflow-hidden border-0">
+        <img [src]="car.imageUrl" class="card-img-top" alt="{{ car.name }}">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">{{ car.name }}</h5>
+          <p class="card-text mb-2">
+            <strong>Type:</strong> {{ car.type }} <br>
+            <strong>Fuel:</strong> {{ car.fuel }} <br>
+            <strong>Transmission:</strong> {{ car.transmission }} <br>
+            <strong>Price:</strong> ₹{{ car.price }}/hr
+          </p>
+          <p class="card-text text-muted mb-3">{{ car.description }}</p>
+          <div class="mt-auto d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <a href="#" class="btn btn-success px-4">Book Now</a>
+            <a
+              href="https://www.google.com/maps?q=Texas+Tower+Kharadi+Pune"
+              target="_blank"
+              class="btn btn-outline-primary btn-sm px-3 py-1 location-btn"
+            >
+              📍 Pickup Location
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

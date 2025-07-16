@@ -1,0 +1,35 @@
+.bike-slider-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  height: 300px;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.bike-slider-track {
+  width: calc(300px * 6); // total slides
+  animation: scrollBikes 18s linear infinite;
+}
+
+.bike-slide {
+  min-width: 300px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.bike-slide img {
+  height: 220px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+@keyframes scrollBikes {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-900px); // move left by width of 3 slides
+  }
+}

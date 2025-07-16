@@ -1,0 +1,13 @@
+
+.location-btn {
+  white-space: nowrap;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.location-btn:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: transparent;
+}

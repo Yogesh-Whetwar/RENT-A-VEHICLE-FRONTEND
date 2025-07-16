@@ -62,7 +62,7 @@ loginUser() {
       console.log('Login successful');  
       // Dispatch an action to update the store if needed
     
-      this.router.navigate(['/home']);
+      this.router.navigate(['/header']);
     } else {
       console.log('Invalid credentials');
     }

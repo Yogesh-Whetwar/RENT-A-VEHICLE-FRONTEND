@@ -1,81 +1,76 @@
 .nav {
-  background-color: #333;
+  background-color: #343a40;
   color: #fff;
-  padding: 0.75rem 2rem;
-  font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #2c2f33;
+
   .secnav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    span {
-      font-size: 1rem;
-      color: #fff;
-    }
-
-    span:first-child {
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: #f84464;
-      flex-shrink: 0;
+  
+  
+    .logo {
+     
+      color: #ffc107;
     }
 
     .search {
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
+    
+      flex: 1;
 
       input {
-        width: 100%;
-        max-width: 500px;
-        padding: 0.75rem 1rem;
+       
+        max-width: 400px;
+        background-color: #f8f9fa;
+        border: 1px solid #ccc;
         border-radius: 6px;
-        border: none;
-        font-size: 0.95rem;
-        outline: none;
-        box-sizing: border-box;
+        padding: 0.4rem 0.75rem;
+
+        &:focus {
+          border-color: #007bff;
+          box-shadow: none;
+        }
       }
     }
 
     .login,
-    .signup {
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-      white-space: nowrap;
-      color: rgb(253, 202, 202);
-      &:hover {
-        background-color: #444;
+    .signup,
+    .more-options {
+     
+
+      a {
+       
+        padding: 0.4rem 0.8rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #fff;
+          color: #343a40;
+        }
+      }
+
+      .logoutbtn {
+       
+        font-weight: 500;
+      }
+
+      .more-options {
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: #ffc107;
+
+        &:hover {
+          color: #fff;
+        }
       }
     }
-
-    .signup {
-      background-color: #2d2b2b;
-      color: white;
-
-      &:hover {
-        background-color: #4a4949;
-      }
-    }
-     a[routerLink] {
-  color: #f84464; // your desired color
-  text-decoration: none;
-  font-weight: 500;
-
-  &:hover {
-    color: #d73755;
-    text-decoration: underline;
   }
 }
 
-    span:last-child {
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-  }
+// Optional: Sidebar overlay style
+app-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1050;
 }

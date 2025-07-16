@@ -6,7 +6,7 @@ import { selectUserName } from '../../store/user/user.selectors';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [Profile,RouterModule],
+  imports: [RouterModule],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss'
 })
