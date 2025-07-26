@@ -4,20 +4,22 @@
       
       <!-- Logo -->
       <div class="col-auto">
-        <span class="logo fw-bold fs-3 text-warning">RENTAL</span>
+        
+        <span class="logo fw-bold fs-3 text-warning" (click)="moveToHome()" style="cursor: pointer;" >RENTAL</span>
       </div>
       
       <!-- Search Bar -->
       <div class="col-md-6 col-sm-12 d-flex justify-content-center">
         <div class="input-group" style="max-width: 800px; width: 100%;">
-          <span class="input-group-text bg-white border-end-0">
+          <span class="input-group-text bg-white border-end-0" (click)="openCityModal()">
             🔍
           </span>
           <input
             type="text"
             class="form-control border-start-0"
-            placeholder="Search for Bike or Car"
+            placeholder="Search your city"
             aria-label="Search"
+            (click)="openCityModal()"
           />
         </div>
       </div>
@@ -64,6 +66,12 @@
 </header>
 
 <!-- Sidebar floating over Home -->
-<app-sidebar [isOpen]="showSidebar" (closeSidebar)="toggleSidebar()"></app-sidebar>
+<app-sidebar [isOpen]="showSidebar" (closeSidebar)="toggleSidebar()"></app-sidebar> 
+<app-city-modal
+  [isOpen]="showCityModal"
+  (closeSidebar)="closeCityModal()"
+  (citySelected)="handleCitySelection($event)">
+</app-city-modal>
 
-<router-outlet></router-outlet>
+
+

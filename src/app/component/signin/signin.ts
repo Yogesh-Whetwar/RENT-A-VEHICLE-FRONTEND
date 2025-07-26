@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SigninService } from '../../service/signin/signinService';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-signin',
   imports: [FormsModule,RouterModule],
@@ -13,7 +13,7 @@ export class Signin {
   email:String='';
   password:String='';
   
-  constructor(private signinService: SigninService){}
+  constructor(private signinService: SigninService,private router:Router){}
 
   addUser(){
     const user = {
@@ -25,6 +25,7 @@ export class Signin {
     this.signinService.createUser(user).subscribe(
       response => {
         console.log('User created successfully');
+        this.router.navigate(['/login']);
         // Handle success, e.g., redirect to login or show a success message
       },
       error => {

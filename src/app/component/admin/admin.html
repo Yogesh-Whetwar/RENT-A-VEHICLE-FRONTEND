@@ -1,0 +1,47 @@
+<table class="table table-striped table-hover align-middle">
+  <thead class="table-primary">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Contact</th>
+      <th>Address</th>
+      <th>Status</th>
+      <th class="text-center">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vendor of vendors">
+      <td>{{ vendor.name }}</td>
+      <td>{{ vendor.email }}</td>
+      <td>{{ vendor.number }}</td>
+      <td>{{ vendor.address }}</td>
+      <td>
+        <span
+          [ngClass]="{
+            'text-warning': vendor.status === 'PENDING',
+            'text-success': vendor.status === 'APPROVED',
+            'text-danger': vendor.status === 'REJECTED'
+          }"
+        >
+          {{ vendor.status }}
+        </span>
+      </td>
+      <td class="text-center">
+        <div class="d-flex justify-content-center gap-2">
+          <button
+            class="btn btn-outline-success btn-sm"
+            (click)="confirmAction(vendor.id, 'APPROVED')"
+          >
+            ✅ Approve
+          </button>
+          <button
+            class="btn btn-outline-danger btn-sm"
+            (click)="confirmAction(vendor.id, 'REJECTED')"
+          >
+            ❌ Reject
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

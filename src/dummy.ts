@@ -7,7 +7,8 @@ export const bikes = [
     gear: 'Automatic',
     price: 30,
     imageUrl: 'assets/images/activa.png',
-    description: 'Perfect for quick city commutes.'
+    description: 'Perfect for quick city commutes.',
+    city: 'Mumbai'
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ export const bikes = [
     gear: 'Manual',
     price: 45,
     imageUrl: 'assets/images/avenger.png',
-    description: 'Comfortable ride for long distances.'
+    description: 'Comfortable ride for long distances.',
+    city: 'Pune'
   },
   {
     id: 3,
@@ -27,10 +29,10 @@ export const bikes = [
     gear: 'Manual',
     price: 50,
     imageUrl: 'assets/images/fzs.png',
-    description: 'Stylish and powerful street bike.'
+    description: 'Stylish and powerful street bike.',
+    city: 'Bengaluru'
   }
-];  
-
+];
 export const cars = [
   {
     id: 1,
@@ -39,8 +41,9 @@ export const cars = [
     fuel: 'Petrol',
     transmission: 'Manual',
     price: 300,
-    imageUrl: 'assets/images/activa.png', // placeholder
-    description: 'Compact, economical, and great for urban driving.'
+    imageUrl: 'assets/images/car1.png',
+    description: 'Compact, economical, and great for urban driving.',
+    city: 'Delhi'
   },
   {
     id: 2,
@@ -49,8 +52,9 @@ export const cars = [
     fuel: 'Diesel',
     transmission: 'Automatic',
     price: 500,
-    imageUrl: 'assets/images/avenger.png', // placeholder
-    description: 'Spacious and perfect for family road trips.'
+    imageUrl: 'assets/images/car2.png',
+    description: 'Spacious and perfect for family road trips.',
+    city: 'Hyderabad'
   },
   {
     id: 3,
@@ -59,8 +63,8 @@ export const cars = [
     fuel: 'Petrol',
     transmission: 'Automatic',
     price: 550,
-    imageUrl: 'assets/images/fzs.png', // placeholder
-    description: 'Premium sedan with comfort and performance.'
+    imageUrl: 'assets/images/car3.png',
+    description: 'Premium sedan with comfort and performance.',
+    city: 'Chennai'
   }
 ];
-

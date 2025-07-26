@@ -18,7 +18,7 @@ export class Login {
   userName:string='';
   email: string = '';
   password: string = '';
- 
+  role:string='';
 
   constructor(private loginServ:LoginService,private router: Router,private store:Store,private profileService:ProfileService) {}
 
@@ -37,14 +37,17 @@ loginUser() {
             this.userId=response;
             console.log("User ID fetched successfully:", this.userId + " for email: " + this.email+"   res is:"+response) ;
              this.profileService.getProfile(this.userId).subscribe(
-          (response)=>{
+          (response)=>{   
+            this.role=response.role; 
+            // console.log(re÷sponse + "Here role should come")
             this.userName=response.name;
               this.store.dispatch(setUser(
         {  
         id:this.userId,
         name:this.userName,
         email: this.email,
-        password: this.password
+        password: this.password,
+        role:this.role
       }
     ));
           },

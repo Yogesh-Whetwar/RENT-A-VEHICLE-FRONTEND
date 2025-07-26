@@ -12,6 +12,8 @@ export class ProfileService {
   url2:string="http://localhost:8080/users/get"; 
 
   updateUrl:string="http://localhost:8080/users/update";
+
+  updateRoleUrl:string="http://localhost:8080/users/updateRole";
 //check if user is logged in that case his email id willl be storesd in our systen so lets asssume that yogesh has logged in and using ngrx
 //we have stored his email id in central place now we will search for yogesh using this considering email id as unique
 constructor(private http:HttpClient){};
@@ -30,5 +32,11 @@ updateProfile(user:any):Observable<any>{
   const newurl = `${this.updateUrl}/${user.id}`; // Append ID to the endpoint
   return this.http.put(newurl, user);
 }
+
+changeUserRole(email:string,role:String):Observable<any>{
+  const payload = { email, role };
+   return this.http.put(this.updateRoleUrl,payload);
+}
+
 
 }

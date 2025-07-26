@@ -1,0 +1,23 @@
+<div class="modal-overlay" *ngIf="isOpen">
+  <div class="modal-content">
+    <h2>Select Your City</h2>
+    
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search city..." class="search-input"/>
+
+    <div class="city-list">
+      <div
+        class="city-card"
+        *ngFor="let city of filteredCities()"
+        (click)="selectCity(city.name)"
+      >
+        <img [src]="city.image" alt="{{ city.name }}" class="city-image"/>
+        <div class="city-details">
+          <h3>{{ city.name }}</h3>
+          <p>{{ city.landmark }}</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-secondary mt-3" (click)="closeModal()">Close</button>
+  </div>
+</div>

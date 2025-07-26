@@ -1,0 +1,4 @@
+<div *ngIf="qrData">
+  <qrcode [qrdata]="qrData" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  <p>Scan to pay ₹{{ amount }}</p>
+</div>
