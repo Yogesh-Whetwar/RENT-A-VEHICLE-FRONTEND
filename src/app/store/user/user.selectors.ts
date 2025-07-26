@@ -7,7 +7,7 @@ export const selectUserId = createSelector(selectUserState, (state) => state.id)
 export const selectUserEmail = createSelector(selectUserState, (state) => state.email);
 export const selectUserName = createSelector(selectUserState, (state) => state.name);
 export const selectuserPassword = createSelector(selectUserState, (state) => state.password);
-
+export const selectuserRole = createSelector(selectUserState, (state) => state.role);
 /*  
 
 To show data in componenets we create selectors

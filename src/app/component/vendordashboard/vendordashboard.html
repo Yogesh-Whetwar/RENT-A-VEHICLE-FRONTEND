@@ -1,0 +1,29 @@
+<div class="container py-5 text-center bg-light rounded shadow">
+  <h2 class="mb-4 display-6 text-primary">🚘 Vendor Dashboard</h2>
+  <p class="mb-4 text-muted">Manage your fleet easily and efficiently with quick-access tools.</p>
+
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <button class="btn btn-primary w-100 py-3" (click)="addVehicle()">➕ Add Vehicle</button>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <button class="btn btn-success w-100 py-3" (click)="viewVehicles()">📋 View My Vehicles</button>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <button class="btn btn-warning w-100 py-3" (click)="editVehicle()">🛠 Edit Vehicle Details</button>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <button class="btn btn-danger w-100 py-3" (click)="deleteVehicle()">🗑 Delete Vehicle</button>
+    </div>
+
+  </div>
+
+  <hr class="my-5">
+  <footer class="text-muted small">
+    🚀 Need help? Contact vendor support anytime.
+  </footer>
+</div>

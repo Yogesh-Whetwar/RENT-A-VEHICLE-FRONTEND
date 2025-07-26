@@ -1,28 +1,53 @@
-<div class="profile-container">
-  <h2>User Profile</h2>
+<div class="container my-5">
+  <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+    <div class="card-header bg-gradient bg-primary text-white py-3 px-4">
+      <h4 class="mb-0">
+        <i class="bi bi-person-circle me-2"></i> User Profile
+      </h4>
+    </div>
 
-  <div class="profile-field">
-    <label for="name">Name:</label>
-    <span id="name">{{ userName }}</span>
-  </div>
+    <div class="card-body px-4 py-4 bg-light">
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label fw-semibold text-secondary">Name</label>
+        <div class="col-sm-9">
+          <p class="form-control-plaintext">{{ userName }}</p>
+        </div>
+      </div>
 
-  <div class="profile-field">
-    <label for="email">Email:</label>
-    <span id="email">{{ userEmail }}</span>
-  </div>
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label fw-semibold text-secondary">Email</label>
+        <div class="col-sm-9">
+          <p class="form-control-plaintext">{{ userEmail }}</p>
+        </div>
+      </div>
 
-  <div class="profile-field password-field">
-    <label for="password">Password:</label>
-    <input
-      id="password"
-      [type]="showPassword ? 'text' : 'password'"
-      [value]="userPassword"
-      readonly
-    />
+      <div class="row align-items-center mb-3">
+        <label class="col-sm-3 col-form-label fw-semibold text-secondary">Password</label>
+        <div class="col-sm-9 d-flex align-items-center">
+          <input
+            id="password"
+            class="form-control me-2"
+            [type]="showPassword ? 'text' : 'password'"
+            [value]="userPassword"
+            readonly
+          />
+          <button
+            type="button"
+            class="btn btn-outline-secondary btn-sm"
+            (click)="togglePasswordVisibility()"
+            [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'"
+            style="font-size: 1.6rem;"
+          >
+            {{ showPassword ? '🙊' : '🙈' }}
+          </button>
+        </div>
+      </div>
+    </div>
 
-    <div class="action-buttons">
-      <button (click)="togglePasswordVisibility()" class="dots-button">...</button>
-      <a routerLink="/updateprofile"  routerLinkActive="active" class="update-profile-link">Update Profile</a>
+    <div class="card-footer bg-white border-top text-end px-4 py-3">
+      <a routerLink="/updateprofile" class="btn btn-success px-4">
+        <i class="bi bi-pencil-square me-1"></i> Update Profile
+      </a>
     </div>
   </div>
 </div>

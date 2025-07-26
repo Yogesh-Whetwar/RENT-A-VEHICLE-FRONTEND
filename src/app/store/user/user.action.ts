@@ -2,7 +2,7 @@ import { createAction, props } from "@ngrx/store";
 
 export const setUser=createAction(  
     '[User]Set User',
-    props<{id:number,name:string,email:string,password:string}>()
+    props<{id:number,name:string,email:string,password:string,role:string}>()
 )  
 
 export const clearUser = createAction(

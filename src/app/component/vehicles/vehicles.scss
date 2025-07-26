@@ -10,4 +10,51 @@
   background-color: #0d6efd;
   color: #fff;
   border-color: transparent;
+}  
+
+.smoke {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(white, transparent);
+  border-radius: 50%;
+  animation: puff 2s ease-out forwards;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 999;
 }
+
+@keyframes puff {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+.payment-wrapper {
+  max-width: 400px;
+  margin: 30px auto;
+  text-align: center;
+
+  h2 {
+    color: #333;
+  }
+
+  button {
+    background-color: #3399cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #2876a8;
+    }
+  }
+}
+

@@ -1,0 +1,49 @@
+
+
+  <div class="container mt-5 mb-5 "   *ngIf="!isVendorAuthorized" >
+    <div class="card shadow p-4">
+      <h2 class="mb-4 text-center">Vendor Application Form</h2>
+
+      <form method="POST" action="http://localhost:8080/vendor/submitVendorForm" enctype="multipart/form-data">
+
+        <!-- Full Name -->
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" name="name" required />
+        </div>
+
+        <!-- Email Address -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" required />
+        </div>
+
+        <!-- Contact Number -->
+        <div class="mb-3">
+          <label for="contact" class="form-label">Contact Number</label>
+          <input type="tel" class="form-control" id="contact" name="number" required />
+        </div>
+
+        <!-- Residential Address -->
+        <div class="mb-3">
+          <label for="address" class="form-label">Residential Address</label>
+          <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+        </div>
+
+        <!-- Aadhaar Upload -->
+        <div class="mb-3">
+          <label for="aadhaar" class="form-label">Upload Aadhaar Card</label>
+          <input class="form-control" type="file" id="aadhaar" name="aadhaar" accept=".pdf,.jpg,.jpeg,.png" required />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+
+      </form>
+    </div>
+  </div>
+
+  <app-vendordashboard  *ngIf="isVendorAuthorized" ></app-vendordashboard>
+
+
+

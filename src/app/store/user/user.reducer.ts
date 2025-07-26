@@ -4,9 +4,9 @@ import { initialUserstate } from "./user.state";
 
 export const userReducer = createReducer(
     initialUserstate,
-    on(setUser, (state, { id, name, email, password }) => {
-    console.log('setUser reducer called with:', { id, name, email, password });
-    return { id, name, email, password };
+    on(setUser, (state, { id, name, email, password ,role}) => {
+    console.log('setUser reducer called with:', { id, name, email, password,role });
+    return { id, name, email, password ,role};
   }),
 
   on(clearUser, () => {

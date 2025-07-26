@@ -1,0 +1,61 @@
+<h1>Add Vehicle</h1>
+<form (ngSubmit)="submitVehicle()" #vehicleForm="ngForm" class="container mt-4">
+
+  <!-- Image Upload -->
+  <div class="mb-3">
+    <label for="vehicleImage" class="form-label">Upload Vehicle Image:</label>
+    <input type="file" id="vehicleImage" (change)="onImageSelected($event)" class="form-control" />
+  </div>
+
+  <div *ngIf="imageUrl" class="mb-3">
+    <p>Image Preview:</p>
+    <img [src]="imageUrl" alt="Vehicle Image" class="img-fluid rounded" style="max-width: 300px;" />
+  </div>
+
+  <!-- Text Fields -->
+  <div class="mb-3">
+    <input type="text" name="name" [(ngModel)]="vehicle.name" class="form-control" placeholder="Vehicle Name" required />
+  </div>
+
+  <div class="mb-3">
+    <input type="text" name="type" [(ngModel)]="vehicle.type" class="form-control" placeholder="Type" />
+  </div>
+
+  <div class="mb-3">
+    <input type="text" name="fuel" [(ngModel)]="vehicle.fuel" class="form-control" placeholder="Fuel Type" />
+  </div>
+
+  <div class="mb-3">
+    <input type="text" name="gear" [(ngModel)]="vehicle.gear" class="form-control" placeholder="Gear Type" />
+  </div>
+
+  <div class="mb-3">
+    <input type="number" name="price" [(ngModel)]="vehicle.price" class="form-control" placeholder="Price" />
+  </div>
+
+  <div class="mb-3">
+    <textarea name="description" [(ngModel)]="vehicle.description" class="form-control" placeholder="Description"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <input type="text" name="city" [(ngModel)]="vehicle.city" class="form-control" placeholder="City" />
+  </div>
+
+  <div class="mb-3">
+    <input type="email" name="vendorEmail" [(ngModel)]="vehicle.vendorEmail" class="form-control" placeholder="Vendor Email" />
+  </div>
+
+  <div class="mb-3">
+    <input type="tel" name="contact" [(ngModel)]="vehicle.contact" class="form-control" placeholder="Contact Number" />
+  </div>
+
+  <div class="mb-3">
+    <input type="text" name="pickupLocation" [(ngModel)]="vehicle.pickupLocation" class="form-control" placeholder="Pickup Location" />
+  </div>
+
+  <div class="mb-3">
+    <input type="text" name="vendor" [(ngModel)]="vehicle.vendor" class="form-control" placeholder="Vendor Name" />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add Vehicle</button>
+</form>

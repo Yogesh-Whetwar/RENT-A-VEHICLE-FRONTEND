@@ -3,11 +3,13 @@ export interface UserState{
     name:string;
     email:string;
     password:string;
+    role:string
 }  
 //I is imp to create the initialUserDtate as reducer will take this as intial state and also as a parameter
 export const initialUserstate:UserState ={
     id: 0,
     name: "",
     email: "",
-    password: ""
+    password: "",
+    role:""
 }

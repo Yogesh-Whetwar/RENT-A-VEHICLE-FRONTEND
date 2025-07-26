@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterEvent, RouterModule, RouterOutlet } from '@angular/router';
+import { Router, RouterEvent, RouterModule, RouterOutlet } from '@angular/router';
 import { Sidebar } from '../sidebar/sidebar';
 import { Store } from '@ngrx/store';
 import { selectUserEmail } from '../../store/user/user.selectors';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { CityModal } from "../city-modal/city-modal";
 
 
 
 @Component({
   selector: 'app-home',
-  imports: [RouterOutlet, RouterModule, Sidebar, CommonModule, FormsModule],
+  imports: [RouterOutlet, RouterModule, Sidebar, CommonModule, FormsModule, CityModal],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
@@ -18,7 +19,7 @@ export class Home {
 showSidebar = true;
 email:string='';
 isUserLoggedIn:boolean=false;
-constructor(private store:Store){}  
+constructor(private store:Store, private router:Router){}  
 ngOnInit() {
 this.store.select(selectUserEmail).subscribe(email =>{
       console.log('User Email:', email); 
@@ -38,5 +39,24 @@ this.store.select(selectUserEmail).subscribe(email =>{
     this.email = ''; // Clear the email
     // Optionally, you can navigate to a different route after logout
     // this.router.navigate(['/login']);
-  }
+  }  
+  moveToHome():void{
+     this.router.navigate(['/header']);
+  }  
+showCityModal=false;
+selectcity:string='';
+openCityModal():void{  
+  console.log("open city modal called");
+  this.showCityModal=true;
+} 
+closeCityModal():void{
+  this.showCityModal=false;
+  this.selectcity='';
+}  
+handleCitySelection(city:string):void{
+  this.selectcity=city;
+  this.showCityModal=false;
+  console.log('user selected: ',city);
+}
+  
 }

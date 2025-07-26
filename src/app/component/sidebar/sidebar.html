@@ -1,11 +1,34 @@
-<div class="sidebar" [class.closed]="isOpen">
-     <button (click)="close()">Close</button>
-  <h2>Hey! {{userName}}</h2>
-  <div class="a">
-    <a routerLink="/profile" routerLinkActive="active">Your Profile</a>
+<div class="sidebar bg-light border-end vh-100 p-3" [class.closed]="isOpen">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="text-primary">Hey! {{userName}}</h4>
+    <button class="btn btn-outline-danger btn-sm" (click)="close()">Close</button>
   </div>
-  <div class="a">Notifications</div>
-  <div class="a">Your bookings</div>
-  <div class="a">Help & Support</div>
-  <div class="a">Rewards</div>
+
+  <ul class="nav flex-column">
+    <li class="nav-item mb-2">
+      <a class="nav-link active text-dark fw-semibold" routerLink="/profile" routerLinkActive="active">
+        <i class="bi bi-person-circle me-2"></i>Your Profile
+      </a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="nav-link text-dark fw-semibold" href="#">
+        <i class="bi bi-bell-fill me-2"></i>Notifications
+      </a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="nav-link text-dark fw-semibold" href="#">
+        <i class="bi bi-calendar-check-fill me-2"></i>Your Bookings
+      </a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="nav-link text-dark fw-semibold" href="#">
+        <i class="bi bi-question-circle-fill me-2"></i>Help & Support
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark fw-semibold"  routerLink="/vendor"  routerLinkActive="active" >
+        <i class="bi bi-shop me-2"></i>Become a Vendor
+      </a>
+    </li>
+  </ul>
 </div>
